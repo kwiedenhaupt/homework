@@ -184,3 +184,31 @@ export default function Profile () {
     </>
   );
 }
+
+//* react syntax for if/else
+
+let content;
+if (isLoggedIn) {
+  content = <AdminPanel />;
+} else {
+  content = <LoginForm />;
+}
+return (
+  <div>
+  {content}
+  </div>
+);
+
+//* conditional ? operator
+<div>
+  {isLoggedIn ? (
+  <AdminPanel />
+  ) : (
+  <LoginForm />
+ 
+  )}
+</div>
+
+//* using &&
+<div> {<isLoggedIn /> && <AdminPanel />}
+</div>

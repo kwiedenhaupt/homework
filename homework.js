@@ -236,3 +236,22 @@ export default function ShoppingList {
     <ul>{list.items)</ul>
    );
 }
+
+//* exercise adding a component
+function Congratulations () {
+  return (
+    <img 
+      src= "https://i.imgur.com/MK3eW3As.jpg"
+      alt="Leo Greay"
+    />
+  );
+}
+
+export default function Profile () {
+  return (
+    <section>
+      <h1> Good job! </h1>
+      <Congratulations />
+      </section>
+  );
+}

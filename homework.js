@@ -255,3 +255,42 @@ export default function Profile () {
       </section>
   );
 }
+
+//export and import functions
+//App.js
+import Gallery from './Gallery.js';
+import { Profile } from './Profile.js';
+
+export default function App() {
+  return (
+    <div>
+      <Gallery />
+      <Profile />
+    </div>
+  );
+}
+
+//Gallery.js
+// Move me to Profile.js!
+import { Profile } from './Profile.js';
+
+export default function Gallery() {
+  return (
+    <section>
+      <h1>Amazing scientists</h1>
+      <Profile />
+      <Profile />
+      <Profile />
+    </section>
+  );
+}
+
+//Profile.js
+export function Profile() {
+  return (
+    <img
+      src="https://i.imgur.com/QIrZWGIs.jpg"
+      alt="Alan L. Hart"
+    />
+  );
+}
